@@ -1,0 +1,26 @@
+{
+    "info": [
+        {
+            "cmd": "help",
+            "desc": "Displays this help message.",
+            "usage": "help"
+        },
+        {
+            "cmd": "info",
+            "desc": "Displays bot information/stats.",
+            "usage": "info"
+        }
+    ],
+    "piano": [
+        {
+            "cmd": "play",
+            "desc": "Plays something somehow",
+            "usage": "play <something>"
+        },
+        {
+            "cmd": "replay",
+            "desc": "Plays something somehow",
+            "usage": "replay"
+        }
+    ]
+}
