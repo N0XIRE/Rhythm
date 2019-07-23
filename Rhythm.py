@@ -1,5 +1,5 @@
 # Works with Python 3.6+
-# THIS IS THE LIVE VERSION
+# THIS IS THE DEV VERSION
 import discord
 import asyncio
 from discord.ext import commands
@@ -12,7 +12,7 @@ with open('config.json', 'r') as f:
 
 TOKEN = config['token']
 client = commands.Bot(command_prefix="-")
-startup_extensions = [""]
+startup_extensions = []
 client.remove_command('help')
 
 async def on_ready():
@@ -21,7 +21,7 @@ async def on_ready():
 @client.event
 async def on_ready():
     # sets Playing message on discord
-    await client.change_presence(activity=Game(name="-help"))
+    await client.change_presence(status=discord.Status.online, activity=discord.Game("-help"))
     # prints succesful launch in console
     print('---\nLogged in as\nUser: ' + client.user.name + '\nID: ' + str(client.user.id) + '\n---')
 
